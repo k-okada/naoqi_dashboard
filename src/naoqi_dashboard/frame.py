@@ -50,6 +50,7 @@ from .power_state_control import PowerStateControl
 from .motors import Motors
 from .avahi import AvahiWidget
 from .posture import PostureWidget
+from .volume import VolumeWidget
 
 from rqt_robot_dashboard.dashboard import Dashboard
 from rqt_robot_dashboard.monitor_dash_widget import MonitorDashWidget
@@ -104,6 +105,9 @@ class NAOqiDashboard(Dashboard):
         ## Postures
         self._postures = PostureWidget(self.robot_prefix)
 
+        ## Volume
+        self._volume = VolumeWidget()
+
         ## Battery State
         self._power_state_ctrl = PowerStateControl('Battery')
 
@@ -115,7 +119,8 @@ class NAOqiDashboard(Dashboard):
                  self._motors_button],
                 [self._power_state_ctrl],
                 #[self.posture_combobox, self.posture_button]
-                [QLabel("Posture"), self._postures]
+                [QLabel("Posture"), self._postures],
+                [QLabel("Volume"), self._volume]
                 ]
 
 
