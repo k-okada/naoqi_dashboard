@@ -22,14 +22,18 @@ analyzers:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Joints
         find_and_remove_prefix: "naoqi_driver_joints:"
+      Network:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Network
+        find_and_remove_prefix: naoqi_driver_network
 #      Laser:
 #        type: diagnostic_aggregator/GenericAnalyzer
 #        path: Laser
 #        find_and_remove_prefix: hokuyo
-#      Camera:
-#        type: diagnostic_aggregator/GenericAnalyzer
-#        path: Camera
-#        find_and_remove_prefix: nao_camera
+      Camera:
+        type: diagnostic_aggregator/GenericAnalyzer
+        path: Camera
+        find_and_remove_prefix: naoqi_driver_camera
 #      WLAN:
 #        type: diagnostic_aggregator/GenericAnalyzer
 #        path: WLAN
