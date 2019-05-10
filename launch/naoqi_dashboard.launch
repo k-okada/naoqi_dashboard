@@ -1,5 +1,5 @@
 <launch>
-  <arg name="launch_gui" default="false" />
+  <arg name="launch_gui" default="true" />
   <node pkg="naoqi_dashboard" type="naoqi_dashboard" name="naoqi_dashboard" output="screen" required="true" if="$(arg launch_gui)"/>
   <node pkg="diagnostic_common_diagnostics" type="tf_monitor.py" name="tf_monitor"/>
   <node pkg="diagnostic_aggregator" type="aggregator_node" name="naoqi_dashboard_aggregator" clear_params="true">
